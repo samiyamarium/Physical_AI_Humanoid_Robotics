@@ -5,7 +5,7 @@ const config = {
   title: 'Physical AI & Humanoid Robotics',
   tagline: 'A complete book on Physical AI, humanoid systems, perception, kinematics, and intelligent machines.',
   url: 'https://samiyamarium.vercel.app', // your Vercel domain
-  baseUrl: '/', // important for Vercel
+  baseUrl: '/', // root path, required for Vercel
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -55,21 +55,12 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: '',
             items: [
-              {
-                label: 'Contents',
-                to: '/docs/front_matter/abstract',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/samiyamarium/Physical_AI_Humanoid_Robotics',
-              },
+              { label: 'Docs', to: '/docs/front_matter/abstract' },
+              { label: 'Contents', to: '/docs/front_matter/abstract' },
+              { label: 'Community', to: '/docs/front_matter/abstract' }, // optional, replace if needed
+              { label: 'GitHub', href: 'https://github.com/samiyamarium/Physical_AI_Humanoid_Robotics' },
             ],
           },
         ],
