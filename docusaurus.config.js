@@ -1,81 +1,57 @@
-// @ts-check 
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).  
-
-import {themes as prismThemes} from 'prism-react-renderer';
+// @ts-check
+// Note: type annotations allow type checking and IDE autocompletion
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Humanoid-robot-book',
-  tagline: 'Robots are cool',
-  favicon: 'img/favicon.ico',
-
-  future: {
-    v4: true,
-  },
-
-  // Production URL of your site
-  url: 'https://samiyamarium.github.io',
-  baseUrl: '/Physical_AI_Humanoid_Robotics/',  // ✅ ends with slash
-
-  // GitHub pages deployment config
-  organizationName: 'samiyamarium', // your GitHub username
-  projectName: 'Physical_AI_Humanoid_Robotics', // your repo name
-
+  title: 'Physical AI & Humanoid Robotics',
+  tagline: 'A complete book on Physical AI, humanoid systems, perception, kinematics, and intelligent machines.',
+  url: 'https://samiyamarium.vercel.app', // Replace with your Vercel domain if different
+  baseUrl: '/', // Must be a path, not a full URL
   onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+  favicon: 'img/favicon.ico',
+  organizationName: 'samiyamarium', // GitHub org/user name
+  projectName: 'Physical_AI_Humanoid_Robotics', // GitHub repo name
 
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
+  // GitHub pages deployment config (not needed for Vercel, but safe to keep)
+  deploymentBranch: 'main',
 
   presets: [
     [
       'classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
+          path: 'docs',
+          routeBasePath: 'docs',
+          sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
             'https://github.com/samiyamarium/Physical_AI_Humanoid_Robotics/edit/main/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          editUrl:
-            'https://github.com/samiyamarium/Physical_AI_Humanoid_Robotics/edit/main/blog/',
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false, // No blog needed
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
   ],
 
-  themeConfig: ({
-      image: 'img/docusaurus-social-card.jpg',
-      colorMode: {
-        respectPrefersColorScheme: true,
-      },
+  themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
       navbar: {
-        title: 'Humanoid Robot Book',
+        title: 'Physical AI & Humanoid Robotics',
         logo: {
-          alt: 'Humanoid Robot Logo',
+          alt: 'Book Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            type: 'doc',
+            docId: 'Abstract_Acknowlegrment_Synopsis_Table_of_contents/Abstract',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Contents',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/samiyamarium/Physical_AI_Humanoid_Robotics',
             label: 'GitHub',
@@ -90,8 +66,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Contents',
+                to: '/docs/Abstract_Acknowlegrment_Synopsis_Table_of_contents/Abstract',
               },
             ],
           },
@@ -99,40 +75,15 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
                 href: 'https://github.com/samiyamarium/Physical_AI_Humanoid_Robotics',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Samiya Marium. Built with Docusaurus.`,
-      },
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        copyright: `© ${new Date().getFullYear()} Samiya Marium. All rights reserved.`,
       },
     }),
 };
 
-export default config;
+module.exports = config;
