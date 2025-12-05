@@ -16,7 +16,7 @@ const config = {
 
   // Production URL of your site
   url: 'https://samiyamarium.github.io',
-  baseUrl: '/https://github.com/samiyamarium/Physical_AI_Humanoid_Robotics',
+  baseUrl: '/Physical_AI_Humanoid_Robotics/',  // ✅ ends with slash
 
   // GitHub pages deployment config
   organizationName: 'samiyamarium', // your GitHub username
