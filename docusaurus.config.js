@@ -1,34 +1,28 @@
 // @ts-check
-// Note: type annotations allow type checking and IDE autocompletion
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Physical AI & Humanoid Robotics',
   tagline: 'A complete book on Physical AI, humanoid systems, perception, kinematics, and intelligent machines.',
-  url: 'https://samiyamarium.vercel.app', // Replace with your Vercel domain if different
-  baseUrl: '/', // Must be a path, not a full URL
+  url: 'https://samiyamarium.vercel.app', // your Vercel domain
+  baseUrl: '/', // important for Vercel
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'samiyamarium', // GitHub org/user name
-  projectName: 'Physical_AI_Humanoid_Robotics', // GitHub repo name
-
-  // GitHub pages deployment config (not needed for Vercel, but safe to keep)
-  deploymentBranch: 'main',
+  organizationName: 'samiyamarium',
+  projectName: 'physical_ai_humanoid_robotics',
 
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           path: 'docs',
           routeBasePath: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/samiyamarium/Physical_AI_Humanoid_Robotics/edit/main/',
+          editUrl: 'https://github.com/samiyamarium/Physical_AI_Humanoid_Robotics/edit/main/',
         },
-        blog: false, // No blog needed
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -36,9 +30,7 @@ const config = {
     ],
   ],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+  themeConfig: ({
       navbar: {
         title: 'Physical AI & Humanoid Robotics',
         logo: {
@@ -48,7 +40,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'Abstract_Acknowlegrment_Synopsis_Table_of_contents/Abstract',
+            docId: 'front_matter/abstract',
             position: 'left',
             label: 'Contents',
           },
@@ -67,7 +59,7 @@ const config = {
             items: [
               {
                 label: 'Contents',
-                to: '/docs/Abstract_Acknowlegrment_Synopsis_Table_of_contents/Abstract',
+                to: '/docs/front_matter/abstract',
               },
             ],
           },
