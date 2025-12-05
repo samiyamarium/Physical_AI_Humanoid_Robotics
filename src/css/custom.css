@@ -28,3 +28,18 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Center the footer links */
+.footer__links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* ensures links wrap nicely on mobile */
+  gap: 1.5rem; /* spacing between links */
+}
+
+/* Center the copyright */
+.footer__copyright {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
